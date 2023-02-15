@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+   
+    
+}
+
+.carrito{
+    top: -25px;
+    left: -50px;
+    position: relative;
+}
+.carrito a img{
+    position: absolute;
+    width: 50px;
+    background-color: aquamarine;
+    padding: 10px;
+    border-end-start-radius: 50%;
+    border-start-end-radius: 50%;
+    transition: all 0.5s;
+}
+
+.carrito a img:hover{
+    background: rgb(222, 247, 82);
+    padding: 5px;
+}
+
+.carrito a .numero-hardcodeado{
+    position: absolute;
+    z-index: 10;
+    color: white;
+    position: absolute;
+    background-color: rgb(209, 4, 4);
+    padding: 0px 7px;
+    border-radius: 50%;
+    right: -55px
+}
+.carrito a .numero-hardcodeado:hover{
+    background-color:aquamarine;
+    
+}
