@@ -1,12 +1,12 @@
 import React from 'react'
-
+import CartWidget from './CartWidger'
 import "./navbar.css"
 
 
 const navbar = () => {
 
     return (
-        <div >
+        <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary bg-secondary ">
                 <div className="container-fluid ">
                     <a className="navbar-brand text-light fw-bolder " href="../public/index.html">Axs Calzado</a>
@@ -36,16 +36,11 @@ const navbar = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className='carrito'>
-                        <a href="../public/index.html">
-                        <img src="https://cdn-icons-png.flaticon.com/512/834/834526.png" alt="carrito" />
-                        <span className='numero-hardcodeado'>1</span>
-                        </a>
-                    </div>
+                    <CartWidget/>
                 </div>
             </nav>
 
-        </div>
+        </>
     )
 }
 
