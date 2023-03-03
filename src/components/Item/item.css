@@ -1,0 +1,20 @@
+body {
+    background-color: #36173d;
+  }  
+  
+  .card-product h5{
+    color: #3d4a5f;
+  }
+
+  .card-product p{
+    color: #3d4a5f;
+  }
+
+  .image-product{
+    width: 200px;
+    height: auto;
+  }
+
+  .div-card{
+    display: flex;
+  }
