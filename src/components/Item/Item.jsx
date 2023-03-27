@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Count from '../Count/Count';
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 import './item.css'
 
 const Item = ({ product }) => {
@@ -15,7 +17,7 @@ const Item = ({ product }) => {
 
                 <div className='div-card'>
                     <div>
-                    <img src={product.image} className="image-product" alt="product-image" />
+                    <img src={product.image} className="image-product" alt="el producto de nuestro catalogo" />
 
                     </div>
 
@@ -25,10 +27,10 @@ const Item = ({ product }) => {
                        {product.description}
                     </p>
 
-                    <a href="#" className="btn btn-dark">
-                        Detalles
-                    </a>
-                    <Count initial={1} stock={product.stock} onAdd={onAdd}/>
+                    <Link to={'/detail'} key={product.id} props={product.id} className="btn btn-dark">
+                        Detalle
+                    </Link>
+                    <Count initial={0} stock={product.stock} onAdd={onAdd}/>
                     </div>
                 </div>
 

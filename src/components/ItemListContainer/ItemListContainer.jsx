@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Count from "../Count/Count.jsx";
+
 import ItemList from "../ItemList/ItemList.jsx";
 import getList from "../Utils/GetList.jsx";
 
@@ -19,9 +19,6 @@ export const ItemListContainer = ()=>{
         .finally()
    }, [])
 
-   
-   
-  
    
     return(
         <>        

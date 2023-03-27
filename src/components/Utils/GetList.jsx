@@ -28,7 +28,7 @@ const products= [
    ];
 
    const getList= ()=>{
-    return new Promise((resolve, reject)=>{
+    return new Promise((resolve)=>{
         setTimeout(() => {
             resolve(products)
         }, 1000);
