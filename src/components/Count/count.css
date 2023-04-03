@@ -1,7 +1,7 @@
 .counter{
     width: fit-content;
     padding: 15px;
-    background-color: antiquewhite;
+    background-color: #ffec5e;
     color: #000000;
     margin: auto;
     text-align: center;
@@ -10,10 +10,11 @@
 button{
     text-decoration: none;
     border: none;
-    margin: 0px 10px;
+    border-radius: 5%;
+    margin: 4px 10px;
     padding: 0px 10px;
 
-    background-color:rgba(250, 235, 215, 0.699);
+    background-color:rgba(17, 17, 17, 0.507);
     color: #173d2b;
     transition: all 0.5s;
 }
@@ -21,6 +22,6 @@ button{
 button:hover{
     background-color: #36173d;
     color: antiquewhite;
-    border-radius: 15%;
+    
 
 }

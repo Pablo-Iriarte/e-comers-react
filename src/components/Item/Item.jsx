@@ -1,15 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Count from '../Count/Count';
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 import './item.css'
 
 const Item = ({ product }) => {
-    const onAdd=(cantidad)=>{
-        alert(`compraste ${cantidad} pares de zapatillas `);
-    } 
     
-    return (
+    
+    return ( 
 
         <>
             <div className="card container my-2 card-product">
@@ -21,16 +17,15 @@ const Item = ({ product }) => {
 
                     </div>
 
-                    <div className="card-body">
+                    <div className="card-body ">
 
-                    <p className="card-text">
+                    <p className="card-text  ">
                        {product.description}
                     </p>
 
-                    <Link to={'/detail'} key={product.id} props={product.id} className="btn btn-dark">
+                    <Link to={`/detail/${product.id}`} key={product.id} props={product.id} className="btn btn-dark">
                         Detalle
                     </Link>
-                    <Count initial={0} stock={product.stock} onAdd={onAdd}/>
                     </div>
                 </div>
 

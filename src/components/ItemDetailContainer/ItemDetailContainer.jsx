@@ -1,28 +1,29 @@
-import React, { useEffect, useState } from 'react'
-import ItemDetail from '../ItemDetail/ItemDetail'
+import React, { useEffect, useState } from 'react';
+import Detail from '../ItemDetail/Detail';
 import getList from "../Utils/GetList.jsx";
-
+import { useParams } from 'react-router-dom';
 
 export const ItemDetailContainer = () => {
 
-  
-    const[arrayList, setArrayList]= useState([])
 
+  const [arrayList, setArrayList] = useState([])
 
-   //extraigo los datos de mi array con una promesa
+  const { detailId } = useParams();
+  //extraigo los datos de mi array con una promesa
 
-   useEffect(()=>{
+  useEffect(() => {
     getList()
-        .then((response)=> setArrayList(response) )
-        .catch((err)=> console.error(err))
-        .finally()
-   }, [])
+      .then((response) => setArrayList(response.find(products => products.id === parseInt(detailId))))
+      .catch((err) => console.error(err))
+      .finally()
+  }, [detailId])
 
-  
-    return (
+
+  return (
 
     <div>
-        <ItemDetail products={arrayList}/>
+      <Detail products={arrayList} />
+
     </div>
   )
 }

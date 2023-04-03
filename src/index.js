@@ -9,7 +9,7 @@ import { Contact } from './components/Contact/Contact.jsx';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx';
 
-
+/* 
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
@@ -22,7 +22,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
+ */
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -33,7 +33,7 @@ root.render(
         <Route exact path='/' element={<Main />} />
         <Route exact path='/contact' element={<Contact/>} />
         <Route exact path='/catalogo' element={<ItemListContainer />} />
-        <Route exact path='/detail' element={<ItemDetailContainer />} />
+        <Route exact path='/detail/:detailId' element={<ItemDetailContainer />} />
 
 
         
